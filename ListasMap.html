@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let numeros =[3,4,1,6,8]
+let frutas = [
+    {"nombre":"platano","precio":3},
+{"nombre":"naranja","precio":1.5},
+{"nombre":"uva","precio":2}
+]
+const personas =[
+    {"nombre":"Marcos","edad":23},
+   {"nombre":"Pablo","edad":30},
+   {"nombre":"Julio","edad":34},
+   {"nombre":"Pepe","edad":11}
+];
+p1={"nombre":"ignacio","age":5}
+personas.push(p1);
+lst_nombres = personas.map(p=>p.nombre);
+
+
+let mayores_30 = personas.filter(x=> x.edad>=30);
+console.log(mayores_30);
+
+mayores_30.forEach(x=> console.log("nombre:"+ x.nombre));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Objetos</title>
+    <script>
+      
+      var animales =[
+         { imagen: "/home/usuario/Descargas/DALL·E 2023-02-16 14.39.57 - serpiente animal en el cielo.png",
+            "nombre": "serpiente", 
+         "velocidad":"7 kh",
+         "tipresistenciao":"9/10"},
+
+    {"nombre":"pez",
+         "velocidad":"13Kh", 
+         "resistencia":"7/10"},
+
+         {"nombre":"avestruz",
+          "velocidad":"17kh",
+         "resistencia":"8/10"},
+
+         {"nombre":"aguila", 
+         "velocidad":"40Kh", 
+         "resistencia":"10/10"},
+        ];
+        let index = 0;
+     </script>
+</head>
+<body>
+   
+
+<h1>Peliculas de animación</h1>
+
+      <div id="animales">
+        <img id="imagen" alt="" />
+        <table>
+          <tr>
+            <td>Nombre:</td>
+            <td><span id="nombre"></span></td>
+          </tr>
+          <tr>
+            <td>Año:</td>
+            <td><span id="velocidad"></span></td>
+          </tr>
+            <td>Tipo:</td>
+            <td><span id="resistencia"></span></td>
+          </tr>
+        </table>
+      </div>
+      <input type="button" value="atras" onclick="atras()" />
+      <input type="button" value="siguiente" onclick="siguiente()" />
+      <script>
+
+     mostrar();
+     function siguiente() {
+   
+        index = index + 1;
+        if (index > peliculas.length) {
+          index = 0;
+        }
+
+        mostrar();
+      }
+
+      function atras() {
+      
+        index = index - 1;
+        if (index < 0) {
+          index = peliculas.length - 1;
+        }
+        mostrar();
+      }
+      function mostrar() {
+        document.getElementById("nombre").innerHTML = peliculas[index].name;
+        document.getElementById("velocidad").innerHTML =
+          peliculas[index].year;
+        document.getElementById("resistencia").innerHTML =
+          peliculas[index].type;
+
+        var img = document.getElementById("imagen");
+        img.setAttribute("src", peliculas[index].imagen);
+      }
+    
+  
+     </script>
+
+    </body>
+
+</html>
